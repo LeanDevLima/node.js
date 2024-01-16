@@ -11,13 +11,12 @@ const swaggerOptions = {
       description: 'API para gerenciamento de tarefas',
     },
   },
-  apis: ['index.js'], // Arquivo que contém as rotas
+  apis: ['index.js'], 
 };
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 /**
- * Configuração do Swagger na aplicação Express
  * @param {express.Application} app - Aplicação Express
  * @param {Function} swaggerUi - Função do swagger-ui-express
  * @param {object} spec - Especificação Swagger gerada

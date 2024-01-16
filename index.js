@@ -8,12 +8,9 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-// Defina as rotas e os métodos CRUD aqui
 
-// Configuração do Swagger
 setupSwagger(app, swaggerUi, swaggerSpec);
 
-// Inicie o servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
@@ -57,8 +54,7 @@ app.listen(port, () => {
 
 
 app.post('/tasks', (req, res) => {
-  // Implemente a lógica para criar uma nova tarefa
-  res.json({ message: 'Tarefa criada com sucesso' });
+      res.json({ message: 'Tarefa criada com sucesso' });
 });
 
 /**
@@ -78,7 +74,6 @@ app.post('/tasks', (req, res) => {
  *                 $ref: '#/definitions/Task'
  */
 app.get('/tasks', (req, res) => {
-  // Implemente a lógica para obter todas as tarefas em aberto
   res.json({ tasks: [] });
 });
 
@@ -103,8 +98,8 @@ app.get('/tasks', (req, res) => {
  *         description: Tarefa atualizada com sucesso
  */
 app.put('/tasks/:id', (req, res) => {
-  // Implemente a lógica para atualizar uma tarefa existente
-  res.json({ message: 'Tarefa atualizada com sucesso' });
+
+    res.json({ message: 'Tarefa atualizada com sucesso' });
 });
 
 /**
@@ -123,6 +118,6 @@ app.put('/tasks/:id', (req, res) => {
  *         description: Tarefa excluída com sucesso
  */
 app.delete('/tasks/:id', (req, res) => {
-  // Implemente a lógica para excluir uma tarefa
-  res.json({ message: 'Tarefa excluída com sucesso' });
+
+    res.json({ message: 'Tarefa excluída com sucesso' });
 });
